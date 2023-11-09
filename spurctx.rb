@@ -5,11 +5,11 @@
 class Spurctx < Formula
   desc ""
   homepage "https://github.com/spurintel/spurctx-cli"
-  version "1.0.5"
+  version "1.0.6"
 
   on_macos do
-    url "https://github.com/spurintel/spurctx-cli/releases/download/1.0.5/spurctx-cli_1.0.5_darwin_all.tar.gz"
-    sha256 "215abba151e77251ff4d62bbf4d9558a794eeefa10e0a6a037c78a40b4e9e633"
+    url "https://github.com/spurintel/spurctx-cli/releases/download/1.0.6/spurctx-cli_1.0.6_darwin_all.tar.gz"
+    sha256 "c7101e66e0bee00d97750c2dbc0d6f12a9aeaffbeacf7f0f7b5db2cd6ced259b"
 
     def install
       bin.install "spurctx-cli"
@@ -18,16 +18,16 @@ class Spurctx < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/spurintel/spurctx-cli/releases/download/1.0.5/spurctx-cli_1.0.5_linux_amd64.tar.gz"
-      sha256 "e1a269b13a1468a8c5d99c6196c53b3bb55fc10bcd76744e11b95d905befc3f2"
+      url "https://github.com/spurintel/spurctx-cli/releases/download/1.0.6/spurctx-cli_1.0.6_linux_amd64.tar.gz"
+      sha256 "febb5c5129c8c3ac8fc3a8fb560d9696221ac6f4f927bb59ad389ef124bd514b"
 
       def install
         bin.install "spurctx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spurintel/spurctx-cli/releases/download/1.0.5/spurctx-cli_1.0.5_linux_arm64.tar.gz"
-      sha256 "fd51556a89da8bee04cbffe1c9a73d867c24dda6efcc6df763bc93df147f1c7c"
+      url "https://github.com/spurintel/spurctx-cli/releases/download/1.0.6/spurctx-cli_1.0.6_linux_arm64.tar.gz"
+      sha256 "6f557f952a948025c0620620e6f7b8674760e1f8ca213736d95f3eb749a8189a"
 
       def install
         bin.install "spurctx"
