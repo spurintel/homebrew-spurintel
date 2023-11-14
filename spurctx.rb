@@ -5,29 +5,39 @@
 class Spurctx < Formula
   desc ""
   homepage "https://github.com/spurintel/spurctx-cli"
-  version "0.0.3"
+  version "0.0.5"
 
   on_macos do
-    url "https://github.com/spurintel/spurctx-cli/releases/download/v0.0.3/spurctx-cli_0.0.3_darwin_all.tar.gz"
-    sha256 "f40237cee572633aa40ae42b731ff86ba8c97b854cba056523ad49ce0cab561e"
-
-    def install
-      bin.install "spurctx"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spurintel/spurctx-cli/releases/download/v0.0.3/spurctx-cli_0.0.3_linux_arm64.tar.gz"
-      sha256 "3d5f90df61ba1ffb80dacd84d640df72e5da6072ec12bbf5b063f550fa1af804"
+    if Hardware::CPU.arm?
+      url "https://github.com/spurintel/spurctx-cli/releases/download/v0.0.5/spurctx-cli_0.0.5_darwin_arm64.tar.gz"
+      sha256 "cbc2633614573fd5f0843da28bafef2a00e3ad6339b4addba6f5370193982865"
 
       def install
         bin.install "spurctx"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/spurintel/spurctx-cli/releases/download/v0.0.3/spurctx-cli_0.0.3_linux_amd64.tar.gz"
-      sha256 "a0e3bbc23a3e85d173bd0a9e8686cd161e5d5c541d92f55faf8345018e1c3ff1"
+      url "https://github.com/spurintel/spurctx-cli/releases/download/v0.0.5/spurctx-cli_0.0.5_darwin_amd64.tar.gz"
+      sha256 "724be180b775315532e4edad74523290c066fa51870a4050c5c34cdd731934a4"
+
+      def install
+        bin.install "spurctx"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/spurintel/spurctx-cli/releases/download/v0.0.5/spurctx-cli_0.0.5_linux_arm64.tar.gz"
+      sha256 "740f18f3d0d53a12c7488bdaf6667533ef2a292c60a0893ed97219446ec00852"
+
+      def install
+        bin.install "spurctx"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/spurintel/spurctx-cli/releases/download/v0.0.5/spurctx-cli_0.0.5_linux_amd64.tar.gz"
+      sha256 "c0528d917a34646769a2bec8ca7fd9355910edc119db603d83f81df741c911f7"
 
       def install
         bin.install "spurctx"
